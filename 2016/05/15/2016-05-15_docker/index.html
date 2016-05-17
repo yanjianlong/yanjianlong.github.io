@@ -13,18 +13,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <meta name="description" content="在 ubuntu 下安装的参考：https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html12Ubuntu 14.04 apt-get install -y docker.io
-基本操作和认识(都需要root权限):获取镜像：pull debian```1查找镜像：```docker search debi">
+基本操作和认识(都需要root权限):获取镜像：1docker pull debian
+查找镜像：1docker search d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="http://yanjianlong.github.io/2016/05/15/2016-05-15_docker/index.html">
 <meta property="og:site_name" content="捡龙眼">
 <meta property="og:description" content="在 ubuntu 下安装的参考：https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html12Ubuntu 14.04 apt-get install -y docker.io
-基本操作和认识(都需要root权限):获取镜像：pull debian```1查找镜像：```docker search debi">
-<meta property="og:updated_time" content="2016-05-17T15:27:14.897Z">
+基本操作和认识(都需要root权限):获取镜像：1docker pull debian
+查找镜像：1docker search d">
+<meta property="og:updated_time" content="2016-05-17T15:38:27.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker">
 <meta name="twitter:description" content="在 ubuntu 下安装的参考：https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html12Ubuntu 14.04 apt-get install -y docker.io
-基本操作和认识(都需要root权限):获取镜像：pull debian```1查找镜像：```docker search debi">
+基本操作和认识(都需要root权限):获取镜像：1docker pull debian
+查找镜像：1docker search d">
   
     <link rel="alternative" href="/atom.xml" title="捡龙眼" type="application/atom+xml">
   
@@ -167,13 +170,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="在-ubuntu-下安装的"><a href="#在-ubuntu-下安装的" class="headerlink" title="在 ubuntu 下安装的"></a>在 ubuntu 下安装的</h1><p>参考：<br><a href="https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html" target="_blank" rel="external">https://philipzheng.gitbooks.io/docker_practice/content/install/ubuntu.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ubuntu 14.04 </span><br><span class="line">apt-get install -y docker.io</span><br></pre></td></tr></table></figure></p>
-<h1 id="基本操作和认识-都需要root权限"><a href="#基本操作和认识-都需要root权限" class="headerlink" title="基本操作和认识(都需要root权限):"></a>基本操作和认识(都需要root权限):</h1><p>获取镜像：<figure class="highlight docker"><figcaption><span>pull debian```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查找镜像：```docker search debian</span><br></pre></td></tr></table></figure></p>
-<p>查看已有镜像：<figure class="highlight docker"><figcaption><span>images```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行镜像：```docker <span class="keyword">run</span> -t -i debian</span><br></pre></td></tr></table></figure></p>
+<h1 id="基本操作和认识-都需要root权限"><a href="#基本操作和认识-都需要root权限" class="headerlink" title="基本操作和认识(都需要root权限):"></a>基本操作和认识(都需要root权限):</h1><p>获取镜像：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull debian</span><br></pre></td></tr></table></figure></p>
+<p>查找镜像：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search debian</span><br></pre></td></tr></table></figure></p>
+<p>查看已有镜像：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure></p>
+<p>运行镜像：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -t -i debian</span><br></pre></td></tr></table></figure></p>
 <p>。。。 在docker 玩了一阵子 发现这个docker 需要保存，然后就可以docker commit 了</p>
-<p>保存修改过后的docker:<figure class="highlight docker"><figcaption><span>commit need_save_docker_id docker/name```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">创建镜像,一键生成配置环境：```Dockerfile</span><br></pre></td></tr></table></figure></p>
+<p>保存修改过后的docker:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit need_save_docker_id docker/name</span><br></pre></td></tr></table></figure></p>
+<p>创建镜像,一键生成配置环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dockerfile</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># This is a comment</span><br><span class="line">FROM ubuntu:14.04</span><br><span class="line">MAINTAINER Docker Newbee &lt;newbee@docker.com&gt;</span><br><span class="line">RUN apt-get -qq update</span><br><span class="line">RUN apt-get -qqy install ruby ruby-dev</span><br><span class="line">RUN gem install sinatra</span><br></pre></td></tr></table></figure>
-<p>执行Dockerfiel:<figure class="highlight docker"><figcaption><span>build -t="tage/file" 目标Dockerfile目录```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地导入：```docker import</span><br></pre></td></tr></table></figure></p>
-<p>导出docker：<figure class="highlight docker"><figcaption><span>save -o ubuntu_14.04.tar ubuntu:14.04```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">载入docker：```docker load --input ubuntu_14.04.tar</span><br></pre></td></tr></table></figure></p>
+<p>执行Dockerfiel:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t=&quot;tage/file&quot; 目标Dockerfile目录</span><br></pre></td></tr></table></figure></p>
+<p>本地导入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker import</span><br></pre></td></tr></table></figure></p>
+<p>导出docker：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o ubuntu_14.04.tar ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
+<p>载入docker：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load --input ubuntu_14.04.tar</span><br></pre></td></tr></table></figure></p>
 <p>容器已经下载的时候 对于 容器的操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker start bob_the_container</span><br><span class="line">docker stop bob_the_container</span><br><span class="line">docker attach bob_the_container</span><br></pre></td></tr></table></figure></p>
 <h2 id="可选使用方案"><a href="#可选使用方案" class="headerlink" title="可选使用方案"></a>可选使用方案</h2><h2 id="docker-私有仓库"><a href="#docker-私有仓库" class="headerlink" title="docker 私有仓库"></a>docker 私有仓库</h2><p><a href="https://yeasy.gitbooks.io/docker_practice/content/data_management/container.html" target="_blank" rel="external">https://yeasy.gitbooks.io/docker_practice/content/data_management/container.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载 docker-registry 然后自我管理</span><br></pre></td></tr></table></figure></p>
 <h2 id="docker-数据目录重定向"><a href="#docker-数据目录重定向" class="headerlink" title="docker 数据目录重定向"></a>docker 数据目录重定向</h2><p><a href="https://yeasy.gitbooks.io/docker_practice/content/data_management/volume.html" target="_blank" rel="external">https://yeasy.gitbooks.io/docker_practice/content/data_management/volume.html</a></p>
@@ -186,6 +194,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/05/17/mysql-query-learn/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mysql 查询分析
+        
+      </div>
+    </a>
   
   
     <a href="/2016/05/04/2016-05-04_vagrant/" id="article-nav-older" class="article-nav-link-wrap">
@@ -233,7 +250,7 @@
   <div class="widget-wrap">
     <div class="widget">
       
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-安装部署/"><i class='fa fa-tags'></i>docker 安装部署</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant-安装部署/"><i class='fa fa-tags'></i>vagrant 安装部署</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式/"><i class='fa fa-tags'></i>分布式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器开发/"><i class='fa fa-tags'></i>服务器开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/集群/"><i class='fa fa-tags'></i>集群</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-安装部署/"><i class='fa fa-tags'></i>docker 安装部署</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql-query/"><i class='fa fa-tags'></i>mysql query</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant-安装部署/"><i class='fa fa-tags'></i>vagrant 安装部署</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式/"><i class='fa fa-tags'></i>分布式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器开发/"><i class='fa fa-tags'></i>服务器开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/集群/"><i class='fa fa-tags'></i>集群</a></li></ul>
     </div>
   </div>
 
@@ -252,7 +269,7 @@
 	  <img src="/" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://yanjianlong.github.io/2016/05/15/2016-05-15_docker/">docker</a></h3>
+	  <h3><a href="http://yanjianlong.github.io/2016/05/04/2016-05-04_vagrant/">vagrant 安装和部署</a></h3>
 	</div>                        
       </div>
     
@@ -263,9 +280,11 @@
 	  <img src="/" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://yanjianlong.github.io/2016/05/04/2016-05-04_vagrant/">vagrant 安装和部署</a></h3>
+	  <h3><a href="http://yanjianlong.github.io/2016/05/15/2016-05-15_docker/">docker</a></h3>
 	</div>                        
       </div>
+    
+  
     
   
     
